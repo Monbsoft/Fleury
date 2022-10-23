@@ -1,11 +1,4 @@
-﻿using FluentAssertions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Fleury.UnitTests.Application;
+﻿namespace Fleury.UnitTests.Application;
 
 public class MultiplicationTests
 {

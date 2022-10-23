@@ -1,6 +1,4 @@
-﻿using FluentAssertions;
-
-namespace Fleury.UnitTests.Application;
+﻿namespace Fleury.UnitTests.Application;
 
 public class DivisionTests
 {
