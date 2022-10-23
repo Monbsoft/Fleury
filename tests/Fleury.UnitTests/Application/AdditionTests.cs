@@ -19,4 +19,12 @@ public class AdditionTests
         addition.Calculation.Operand1.Should().Be(12);
         addition.Calculation.Operand2.Should().Be(14);
     }
+
+    [Fact]
+    public void CalculateTest()
+    {
+        var addition = Addition.Create(65, 21);
+
+        addition.Result.Should().Be(86);
+    }
 }

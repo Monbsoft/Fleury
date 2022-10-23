@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Monbsoft.Fleury.Application.Domain;
 
-namespace Monbsoft.Fleury.Application.Interfaces
+namespace Monbsoft.Fleury.Application.Interfaces;
+
+public interface IRule
 {
-    internal interface IRule
-    {
-    }
+    OperationBase Generate(GameContext context);
 }
+

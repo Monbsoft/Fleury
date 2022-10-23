@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Monbsoft.Fleury.Application.Domain;
 
-namespace Monbsoft.Fleury.Application.Domain
+public class GameContext
 {
-    internal class GameContext
-    {
-    }
+    public int Level { get; set; }
+    public Operator? Operator { get; set; }
 }
