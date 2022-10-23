@@ -1,18 +1,18 @@
-﻿namespace Monbsoft.Fleury.Application.Domain;
+﻿using Monbsoft.Fleury.Application.Interfaces;
 
-public class Division : OperationBase
+namespace Monbsoft.Fleury.Application.Domain;
+
+public class Division : Calculation, IOperation
 {
-    public Division(Calculation calculation)
-        : base(calculation)
+    public Division(decimal operand1, decimal operand2)
+        : base(Operator.Divide, operand1, operand2)
     {
-        if (calculation.Operator != Operator.Divide)
-            throw new ArgumentException(nameof(calculation.Operator));
     }
 
-    public override double Result => Calculation.Operand1 / Calculation.Operand2;
+    public decimal Result => Operand1 / Operand2;
 
-    public static Division Create(double operand1, double operand2)
+    public static Division Create(decimal operand1, decimal operand2)
     {
-        return new Division(new Calculation(Operator.Divide, operand1, operand2));
+        return new Division(operand1, operand2);
     }
 }

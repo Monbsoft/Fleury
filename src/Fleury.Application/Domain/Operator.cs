@@ -4,7 +4,7 @@ public enum Operator
 {
     Plus = '+',
     Minus = '-',
-    Times = '*',
+    Multiply = '*',
     Divide = '/',
     Pow = '^',
 }

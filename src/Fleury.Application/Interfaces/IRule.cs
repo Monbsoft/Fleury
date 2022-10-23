@@ -4,6 +4,6 @@ namespace Monbsoft.Fleury.Application.Interfaces;
 
 public interface IRule
 {
-    OperationBase Generate(GameContext context);
+    IOperation Generate(GameContext context);
 }
 

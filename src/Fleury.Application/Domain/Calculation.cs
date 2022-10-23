@@ -2,7 +2,7 @@
 
 public class Calculation
 {
-    public Calculation(Operator @operator, double operand1, double operand2)
+    public Calculation(Operator @operator, decimal operand1, decimal operand2)
     {
         Operator = @operator;
         Operand1 = operand1;
@@ -16,8 +16,8 @@ public class Calculation
         Operand2 = calculation.Operand2;
     }
 
-    public double Operand1 { get; }
-    public double Operand2 { get; }
+    public decimal Operand1 { get; }
+    public decimal Operand2 { get; }
     public Operator Operator { get; }
 
     public override bool Equals(object? obj)
@@ -36,10 +36,5 @@ public class Calculation
     public override int GetHashCode()
     {
         return Operator.GetHashCode() ^ Operand1.GetHashCode() ^ Operand2.GetHashCode();
-    }
-
-    public override string ToString()
-    {
-        return $"({Operator} {Operand1}, {Operand2})";
     }
 }

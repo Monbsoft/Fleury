@@ -1,20 +1,20 @@
-﻿namespace Monbsoft.Fleury.Application.Domain;
+﻿using Monbsoft.Fleury.Application.Interfaces;
+using System.Net.Http.Headers;
 
-public class Subtraction : OperationBase
+namespace Monbsoft.Fleury.Application.Domain;
+
+public class Subtraction : Calculation, IOperation
 {
-    public Subtraction(Calculation calculation)
-        : base(calculation)
+    public Subtraction(decimal operand1, decimal operand2)
+        : base(Operator.Minus, operand1, operand2)
     {
-
-        if (calculation.Operator != Operator.Minus)
-            throw new ArgumentException(nameof(calculation.Operator));
     }
 
-    public override double Result => Calculation.Operand1 - Calculation.Operand2;
+    public decimal Result => Operand1 - Operand2;
 
-    public static Subtraction Create(double operand1, double operand2)
+    public static Subtraction Create(decimal operand1, decimal operand2)
     {
-        return new Subtraction(new Calculation(Operator.Minus, operand1, operand2));
+        return new Subtraction(operand1, operand2);
     }
 }
 

@@ -11,10 +11,10 @@ public class SimpleRule : IRule
     /// Generates a calculation
     /// </summary>
     /// <returns>A calculation</returns>
-    public OperationBase Generate(GameContext context)
+    public IOperation Generate(GameContext context)
     {
-        double operand1 = Convert.ToDouble(random.Next(100));
-        double operand2 = Convert.ToDouble(random.Next(100));
+        decimal operand1 = Convert.ToDecimal(random.Next(100));
+        decimal operand2 = Convert.ToDecimal(random.Next(100));
 
 
         return Addition.Create(operand1, operand2);

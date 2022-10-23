@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Monbsoft.Fleury.Application.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,19 +7,18 @@ using System.Threading.Tasks;
 
 namespace Monbsoft.Fleury.Application.Domain;
 
-public class Multiplication : OperationBase
+public class Multiplication : Calculation, IOperation
 {
-    public Multiplication(Calculation calculation)
-        : base(calculation)
+    public Multiplication(decimal operand1, decimal operand2)
+        : base(Operator.Multiply, operand1, operand2)
     {
-        if (calculation.Operator != Operator.Times)
-            throw new ArgumentException(nameof(calculation.Operator));
+
     }
 
-    public override double Result => Calculation.Operand1 * Calculation.Operand2;
+    public decimal Result => Operand1 * Operand2;
 
-    public static Multiplication Create(double operand1, double operand2)
+    public static Multiplication Create(decimal operand1, decimal operand2)
     {
-        return new Multiplication(new Calculation(Operator.Times, operand1, operand2));
+        return new Multiplication(operand1, operand2);
     }
 }

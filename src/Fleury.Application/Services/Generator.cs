@@ -3,15 +3,12 @@ using Monbsoft.Fleury.Application.Interfaces;
 
 namespace Monbsoft.Fleury.Application.Services;
 
-public class Calculator
+public class Generator
 {
     private readonly IRuleManager _ruleManager;
-    private readonly Random _random;
 
-    public Calculator(IRuleManager ruleManager)
+    public Generator(IRuleManager ruleManager)
     {
-        _random = new Random();
-
         _ruleManager = ruleManager;
     }
 
@@ -19,11 +16,11 @@ public class Calculator
     /// Geneates operations by applying the rules.
     /// </summary>
     /// <returns></returns>
-    public List<OperationBase> GenerateOperations(GameContext context)
+    public List<IOperation> GenerateOperations(GameContext context)
     {
         if (context == null) throw new ArgumentNullException(nameof(context));
 
-        List<OperationBase> operations = new List<OperationBase>();
+        var operations = new List<IOperation>();
         _ruleManager.Generate(context);
         var rule = _ruleManager.Choosee(context);
 

@@ -9,7 +9,8 @@ namespace Monbsoft.Fleury.Application.Interfaces;
 
 public interface IOperation
 {
-    public Calculation Calculation { get; }
-    public double Result { get; }
-
+    public decimal Operand1 { get; }
+    public decimal Operand2 { get; }
+    public Operator Operator { get; }
+    public decimal Result { get; }
 }

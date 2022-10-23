@@ -1,19 +1,23 @@
-﻿namespace Monbsoft.Fleury.Application.Domain;
+﻿using Monbsoft.Fleury.Application.Interfaces;
+
+namespace Monbsoft.Fleury.Application.Domain;
 
 
-public class Addition : OperationBase
+public class Addition : Calculation, IOperation
 {
-    public Addition(Calculation calculation)
-        : base(calculation)
+    public Addition(decimal operand1, decimal operand2)
+        : base(Operator.Plus, operand1, operand2)
     {
-        if (calculation.Operator != Operator.Plus)
-            throw new ArgumentException(nameof(calculation.Operator));
     }
 
-    public override double Result => Calculation.Operand1 + Calculation.Operand2;
+    public decimal Result => Operand1 + Operand2;
 
-    public static Addition Create(double operand1, double operand2)
+    public static Addition Create(decimal operand1, decimal operand2)
     {
-        return new Addition(new Calculation(Operator.Plus, operand1, operand2));
+        return new Addition(operand1, operand2);
+    }
+    public override string ToString()
+    {
+        return $"(+ {Operand1} {Operand2})";
     }
 }
