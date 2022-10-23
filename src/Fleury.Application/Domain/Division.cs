@@ -15,4 +15,8 @@ public class Division : Calculation, IOperation
     {
         return new Division(operand1, operand2);
     }
+    public override string ToString()
+    {
+        return $"(/ {Operand1} {Operand2})";
+    }
 }

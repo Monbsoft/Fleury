@@ -21,4 +21,8 @@ public class Multiplication : Calculation, IOperation
     {
         return new Multiplication(operand1, operand2);
     }
+    public override string ToString()
+    {
+        return $"(* {Operand1} {Operand2})";
+    }
 }

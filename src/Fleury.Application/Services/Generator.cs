@@ -22,7 +22,7 @@ public class Generator
 
         var operations = new List<IOperation>();
         _ruleManager.Generate(context);
-        var rule = _ruleManager.Choosee(context);
+        var rule = _ruleManager.Choose(context);
 
         for (int i = 0; i < 10; i++)
         {

@@ -27,7 +27,7 @@ public class AdditionTests
         var addition2 = Addition.Create(21, 15);
 
         addition1.Should().Be(addition2);
-    }
+    }    
     [Fact]
     public void ToStringTest()
     {

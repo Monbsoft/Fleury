@@ -22,9 +22,10 @@ public class RuleManager : IRuleManager
     /// </summary>
     /// <returns>A calculation rule</returns>
     /// <exception cref="ArgumentNullException"></exception>
-    public IRule Choosee(GameContext context)
+    public IRule Choose(GameContext context)
     {
-        if (context == null) throw new ArgumentNullException(nameof(context));
+        if (context == null) 
+            throw new ArgumentNullException(nameof(context));
 
         if (_rules.Count == 1)
             return _rules.First();
