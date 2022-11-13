@@ -3,7 +3,7 @@ using Monbsoft.Fleury.Application.Interfaces;
 
 namespace Monbsoft.Fleury.Application.Services;
 
-public class Generator
+public class Generator : IGenerator
 {
     private readonly IRuleManager _ruleManager;
 
