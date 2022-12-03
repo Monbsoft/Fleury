@@ -15,6 +15,10 @@ public class Division : Calculation, IOperation
     {
         return new Division(operand1, operand2);
     }
+    public bool Check(decimal response)
+    {
+        return Result.Equals(response);
+    }
     public override string ToString()
     {
         return $"(/ {Operand1} {Operand2})";

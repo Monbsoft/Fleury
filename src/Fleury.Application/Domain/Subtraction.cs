@@ -16,6 +16,10 @@ public class Subtraction : Calculation, IOperation
     {
         return new Subtraction(operand1, operand2);
     }
+    public bool Check(decimal response)
+    {
+        return Result.Equals(response);
+    }
     public override string ToString()
     {
         return $"(- {Operand1} {Operand2})";

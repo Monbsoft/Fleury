@@ -13,4 +13,5 @@ public interface IOperation
     public decimal Operand2 { get; }
     public Operator Operator { get; }
     public decimal Result { get; }
+    bool Check(decimal response);
 }
