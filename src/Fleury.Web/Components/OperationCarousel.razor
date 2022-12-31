@@ -1,0 +1,35 @@
+﻿@if (Operations == null)
+{
+    <Loader />
+}
+else
+{
+    <MudCarousel Class="mud-width-full" Style="height:400px;" ShowArrows="@arrows" ShowBullets="@bullets" EnableSwipeGesture="@enableSwipeGesture" AutoCycle="@autocycle" TData="object" @ref="_carousel">
+        @foreach (var operation in Operations)
+        {
+            <OperationItem Operation="@operation" OnResponseChanged="@HandleResponseChanged" />
+        }
+    </MudCarousel>
+}
+
+@code {
+    private MudCarousel<object> _carousel;
+    private bool arrows = true;
+    private bool bullets = true;
+    private bool enableSwipeGesture = true;
+    private bool autocycle = false;
+
+
+    [Parameter]
+    public List<IOperation> Operations { get; set; }
+
+
+    protected void HandleResponseChanged(double? value)
+    {
+        _carousel.Next();
+
+    }
+
+
+
+}

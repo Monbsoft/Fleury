@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fleury.Web", "src\Fleury.Web\Fleury.Web.csproj", "{AA02134E-912B-416B-ABD3-881535E614C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fleury.Web", "src\Fleury.Web\Fleury.Web.csproj", "{AA02134E-912B-416B-ABD3-881535E614C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fleury.Application", "src\Fleury.Application\Fleury.Application.csproj", "{B3BBC47E-8A3F-4C23-A90F-EDEEE738AD30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fleury.Application", "src\Fleury.Application\Fleury.Application.csproj", "{B3BBC47E-8A3F-4C23-A90F-EDEEE738AD30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fleury.Infrastructure", "src\Fleury.Infrastructure\Fleury.Infrastructure.csproj", "{6F7DD642-3A33-4F65-8968-BEE0692848E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fleury.Infrastructure", "src\Fleury.Infrastructure\Fleury.Infrastructure.csproj", "{6F7DD642-3A33-4F65-8968-BEE0692848E2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6AD58C1B-3B53-4257-B86A-F922BE665447}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5E020CAD-5385-4F97-A65F-B790CC7920D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fleury.UnitTests", "tests\Fleury.UnitTests\Fleury.UnitTests.csproj", "{2AD469EE-DF9B-4AA2-A518-4F54F8AE875C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fleury.UnitTests", "tests\Fleury.UnitTests\Fleury.UnitTests.csproj", "{2AD469EE-DF9B-4AA2-A518-4F54F8AE875C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

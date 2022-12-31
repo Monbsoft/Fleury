@@ -1,0 +1,38 @@
+﻿@inject ILogger<OperationItem> Logger
+<MudCarouselItem Class="pa-12" Transition="transition" Color="@Color.Primary">
+    <MudPaper Class="pa-4 mud-theme-secondary" Elevation="0">
+        <MudText Align="Align.Center" Typo="Typo.h1">@Operation</MudText>
+    </MudPaper>
+    <MudPaper Class="pa-4 mud-info">
+        <MudNumericField T="double"  Value="@response" ValueChanged="@HandleValueChanged" Style="color: white; font-size: 28px;" Variant="Variant.Text"></MudNumericField>
+        <MudTextField T="double?" Value="@test" ValueChanged="@HandleTestChanged" Variant="Variant.Text"/>
+    </MudPaper>
+</MudCarouselItem>
+
+@code {
+    private double response;
+    private double? test = 45d;
+    private Transition transition = Transition.Slide;
+
+    [Parameter]
+    public IOperation Operation { get; set; }
+
+    [Parameter]
+    public EventCallback<double?> OnResponseChanged { get; set; }
+
+
+    protected void HandleValueChanged(double value)
+    {
+        Logger.LogInformation(value.ToString());
+        response = response + 1;
+
+    }
+
+    protected async void HandleTestChanged(double? value)
+    {
+        test = value;
+
+        await OnResponseChanged.InvokeAsync(value);
+    }
+
+}

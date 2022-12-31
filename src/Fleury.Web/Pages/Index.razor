@@ -3,48 +3,18 @@
 @inject IGenerator Generator
 
 <PageTitle>Index</PageTitle>
-@if (_operations == null)
-{
-
-}
-else
-{
-    <MudCarousel Class="mud-width-full" Style="height:400px;" ShowArrows="@arrows" ShowBullets="@bullets" EnableSwipeGesture="@enableSwipeGesture" AutoCycle="@autocycle" TData="object">
-        @foreach (var operation in _operations)
-        {
-            <MudCarouselItem Transition="transition" Color="@Color.Primary">
-                <div class="d-flex" style="height:100%">
-                    <MudGrid>
-                        <MudItem xs="12">
-                            <MudText Typo="Typo.h1">@operation</MudText>
-                        </MudItem>
-                        <MudItem xs="12">
-                            <MudTextField T="double" Label="Standard" ValueChanged="@HandleResponseChanged" Variant="Variant.Text"></MudTextField>
-                        </MudItem>
-                    </MudGrid>
-                </div>
-            </MudCarouselItem>
-        }
-    </MudCarousel>
-}
-
+<OperationCarousel Operations="@_operations" />
 @code {
-    private bool arrows = true;
-    private bool bullets = true;
-    private bool enableSwipeGesture = true;
-    private bool autocycle = false;
-    private Transition transition = Transition.Slide;
     private List<IOperation> _operations = null;
-
 
     protected override void OnInitialized()
     {
         _operations = Generator.GenerateOperations(new Application.Domain.GameContext());
 
     }
-    private void HandleResponseChanged(double response)
+    protected override void OnParametersSet()
     {
-
+        base.OnParametersSet();
     }
 }
 
