@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fleury.Server", "src\Fleury
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fleury.Shared", "src\Fleury\Shared\Fleury.Shared.csproj", "{86FCD0BC-BEAB-4A73-8B17-9CBA40A418E0}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fleury.Infrastructure", "src\Fleury\Infrastructure\Fleury.Infrastructure.csproj", "{93475388-68BD-4F6B-8107-9DB500A57809}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fleury.Application", "src\Fleury\Fleury.Application\Fleury.Application.csproj", "{EF29EA5B-E640-4BA8-B83D-18D247E27A58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{86FCD0BC-BEAB-4A73-8B17-9CBA40A418E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86FCD0BC-BEAB-4A73-8B17-9CBA40A418E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86FCD0BC-BEAB-4A73-8B17-9CBA40A418E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93475388-68BD-4F6B-8107-9DB500A57809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93475388-68BD-4F6B-8107-9DB500A57809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93475388-68BD-4F6B-8107-9DB500A57809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93475388-68BD-4F6B-8107-9DB500A57809}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF29EA5B-E640-4BA8-B83D-18D247E27A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF29EA5B-E640-4BA8-B83D-18D247E27A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF29EA5B-E640-4BA8-B83D-18D247E27A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF29EA5B-E640-4BA8-B83D-18D247E27A58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

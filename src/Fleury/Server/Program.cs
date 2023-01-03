@@ -1,4 +1,4 @@
-using Fleury.Server.Data;
+using Fleury.Infrastructure.Data;
 using Fleury.Server.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.ResponseCompression;

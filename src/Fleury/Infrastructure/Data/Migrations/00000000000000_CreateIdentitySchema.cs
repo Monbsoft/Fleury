@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 
-namespace Fleury.Server.Data.Migrations
+namespace Fleury.Infrastructure.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {
